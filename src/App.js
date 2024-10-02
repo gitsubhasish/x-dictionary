@@ -44,7 +44,7 @@ function App() {
           <button onClick={handleSearch}>Search</button>
         </div>
         <span>Definition:</span>
-        <span>A JavaScript library for building user interfaces.</span>
+        <span>{answer !== "" ? answer : null}</span>
       </div>
     </div>
   );
