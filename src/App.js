@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
 
 function App() {
   const [question, setQuestion] = useState("");
@@ -21,7 +19,7 @@ function App() {
       return;
     }
 
-    // Find the word in the wordList
+    // Find the word in the qaList
     const foundWord = qaList.find(
       (entry) => entry.word.toLowerCase() === question.toLowerCase()
     );
@@ -41,9 +39,9 @@ function App() {
         <div>
           <input
             type="text"
-            value={question}
+            value={question} // Ensure input is controlled
             placeholder="Search for a word..."
-            onChange={(e) => setQuestion(e.target.value)}
+            onChange={(e) => setQuestion(e.target.value)} // Update state on change
           />
           <button onClick={handleSearch}>Search</button>
         </div>
