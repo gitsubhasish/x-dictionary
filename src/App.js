@@ -43,7 +43,7 @@ function App() {
         </div>
         <div>
           <span>
-            <strong>Definition : </strong>
+            <strong>Definition:</strong>
             {answer != "" ? answer : null}
           </span>
         </div>
