@@ -43,12 +43,8 @@ function App() {
           />
           <button onClick={handleSearch}>Search</button>
         </div>
-        <div>
-          <span>
-            <strong>Definition:</strong>
-          </span>
-          <span>A JavaScript library for building user interfaces.</span>
-        </div>
+        <span>Definition:</span>
+        <span>A JavaScript library for building user interfaces.</span>
       </div>
     </div>
   );
