@@ -16,6 +16,11 @@ function App() {
   ];
 
   const handleSearch = () => {
+    if (!question.trim()) {
+      setAnswer("Word not found in the dictionary.");
+      return;
+    }
+
     // Find the word in the wordList
     const foundWord = qaList.find(
       (entry) => entry.word.toLowerCase() === question.toLowerCase()
@@ -36,6 +41,7 @@ function App() {
         <div>
           <input
             type="text"
+            value={question}
             placeholder="Search for a word..."
             onChange={(e) => setQuestion(e.target.value)}
           />
@@ -43,8 +49,7 @@ function App() {
         </div>
         <div>
           <span>
-            <strong>Definition:</strong>
-            {answer != "" ? answer : null}
+            <strong>Definition:</strong> {answer !== "" ? answer : null}
           </span>
         </div>
       </div>
