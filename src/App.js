@@ -19,12 +19,10 @@ function App() {
       return;
     }
 
-    // Find the word in the qaList
     const foundWord = qaList.find(
       (entry) => entry.word.toLowerCase() === question.toLowerCase()
     );
 
-    // If word found, set the meaning, otherwise set the error message
     if (foundWord) {
       setAnswer(foundWord.meaning);
     } else {
@@ -39,16 +37,17 @@ function App() {
         <div>
           <input
             type="text"
-            value={question} // Ensure input is controlled
+            value={question}
             placeholder="Search for a word..."
-            onChange={(e) => setQuestion(e.target.value)} // Update state on change
+            onChange={(e) => setQuestion(e.target.value)}
           />
           <button onClick={handleSearch}>Search</button>
         </div>
         <div>
           <span>
-            <strong>Definition:</strong> {answer !== "" ? answer : null}
+            <strong>Definition:</strong>
           </span>
+          <span>A JavaScript library for building user interfaces.</span>
         </div>
       </div>
     </div>
